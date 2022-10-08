@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200;300;400;600&display=swap');
+:root{
+    --red: #EA2027;
+    --red-300: #ff7675;
+    --purple: #6F1E51;
+    --black: #1e272e;
+    --white: #fff;
+    --gray: #dfe4ea;
+    --gray-200: #f1f2f6;
+    --gray-100: #ffffff;
+}
+
+*
+{
+    font-family: 'Inter Tight', sans-serif; 
+    transition: all 0.3s ease;
+}
+
+
+/********************************* MY GENERAL CLASSES ***************************************/
+
+
+/* HEADER SECTION */
+.navbar-expand-lg 
+{
+    box-shadow: 0 5px 10px var(--gray);
+}
+.search-btn
+{
+    border: none;
+    outline: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: var(--red);
+    color: var(--white);
+    font-size: 1.1em;
+}
+.search-btn:hover
+{
+    background-color: var(--red-300);
+}
+.nav-link
+{
+    padding: 3px 8px;
+    border-radius: 10px;
+    margin-right: 15px
+}
+.nav-link:hover
+{
+    background-color: var(--red);
+    color: var(--white) !important;
+}
+
+
+
+
+
+/* SLIDER SECTION */
+.slider-main-body
+{
+    
+    overflow: hidden;
+}
+
+.slider-row .food-opt
+{
+    padding: 20px;
+}
+.slider-row .food-opt h1
+{
+    font-size: 3em;
+    margin: 10px 0;
+}
+.slider-row .food-opt p
+{
+    margin: 0;
+}
+.slider-row .food-opt button
+{
+    border: none;
+    outline: none;
+    padding: 3px 8px;
+    background-color: var(--red);
+    color: var(--white);
+    border-radius: 5px;
+    margin-top: 15px;
+}
+.dish-pic
+{
+    margin:0 auto;
+    width: 400px;
+}
+.dish-pic img
+{
+    width: 100%;
+}
+
+.slider-controls
+{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+.slider-controls button
+{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background-color: var(--gray);
+}
+.home-dish-card
+{
+    text-align: center;
+    margin-bottom: 24px;
+}
+.home-dish-card .card-body a
+{
+    text-decoration: none;
+    color: var(--black);
+}
+.home-dish-card .card-body a:nth-child(2)
+{
+    background-color: var(--red);
+    color: var(--white);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.dish-image
+{
+    height: 180px;
+    overflow: hidden;
+    width: 100%;
+}
+.dish-image img
+{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+
+/* ABOUT US SECTION */
+.about-wrapper
+{
+    background-color: var(--red);
+    color: var(--gray-100);
+    padding: 80px 0;
+}
+.about-img img
+{
+    width: 100%;
+}
+.about-us h2,
+.about-us p
+{
+    margin: 0;
+}
+.about-us p
+{
+    text-align: justify;
+    margin: 10px;
+    line-height: 1.8;
+}
+.about-us ul
+{
+    display: flex;
+    list-style: none;
+    gap: 0 10px;
+    padding: 0;
+}
+.about-us ul li
+{
+    padding: 10px 20px;
+    background-color: var(--gray);
+    color: var(--red);
+    border: 1px dashed var(--red)
+}
+
+
+
+
+
+/* MENU */
+.menu-card
+{
+    margin-bottom: 30px;
+}
+.menu-card .card-body a
+{
+    text-decoration: none;
+    color: var(--black);
+}
+.menu-card .card-body a:nth-child(2)
+{
+    background-color: var(--red);
+    color: var(--white);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+
+/* ORDER NOW */
+.form-wrapper
+{
+    background-color: var(--gray);
+    padding: 50px 0;
+}
+.form-wrapper .form-group
+{
+    margin-bottom: 10px;
+}

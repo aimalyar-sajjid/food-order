@@ -13,11 +13,11 @@
 
     <!-- MENU SECTION -->
       <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-        <li class="nav-item "><a class="nav-link active" aria-current="page" href="#">Home</a></li>
-        <li class="nav-item"><a class="nav-link " href="#">Dishes</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Menu</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Order</a></li>
+        <li class="nav-item "><a class="nav-link active" aria-current="page" href="">Home</a></li>
+        <li class="nav-item"><a class="nav-link " href="#popular-dishes">Dishes</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about-us">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+        <li class="nav-item"><a class="nav-link" href="#order">Order</a></li>
       </ul>
 
       <!-- SEARCH BUTTON -->

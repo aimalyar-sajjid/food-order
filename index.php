@@ -3,7 +3,7 @@
 
 
     <!-- PRODUCTS -->
-    <div class="container">
+    <div class="container" id="popular-dishes">
                 <!-- SECTION -->
         <div class="my-5 text-center">
             <h1>POPULAR DISHES</h1>
@@ -210,7 +210,7 @@
 
 
 
-<div class="row">
+<div class="row" id="about-us">
     <div class="col">
         <!-- SECTION -->
         <div class="my-5 text-center">
@@ -222,14 +222,14 @@
 <div class="container-fluid about-wrapper">
 <div class="container">
 
-    <div class="row">
-        <div class="col-5">
+    <div class="row" >
+        <div class="col-md-5">
             <div class="about-img">
                 <img src="assets/images/about-img.png" alt="">
             </div>
         </div>
 
-        <div class="col-7">
+        <div class="col-md-7">
             <div class="about-us">
                 <h2>We and Our Best Services</h2>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum porro, ipsa accusamus quis consequatur maxime ipsum. Enim temporibus quae aperiam, odit pariatur eveniet at, in, vel reprehenderit repellat eligendi sequi? Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, architecto ratione similique ab quisquam atque delectus eligendi quo ex repellat itaque at accusantium libero blanditiis? Quo rem recusandae adipisci ad?</p>
@@ -250,14 +250,14 @@
 
 
   <!-- PRODUCTS -->
-  <div class="container">
+  <div class="container" id="menu">
                 <!-- SECTION -->
         <div class="my-5 text-center">
             <h1>OUR MENU</h1>
         </div>
 
 
-        <div class="row">
+        <div class="row" >
                 <div class="col-md-3">
                 <div class="card menu-card">
                 <div class="dish-image text-center">
@@ -473,8 +473,8 @@
 
 
 <!-- ORDER FORM -->
-<div class="container-fluid my-5 form-wrapper">
-    <div class="row">
+<div class="container-fluid my-5 form-wrapper" id="order">
+    <div class="row" > 
         <div class="col">
                             <!-- SECTION -->
         <div class="mb-4 text-center">

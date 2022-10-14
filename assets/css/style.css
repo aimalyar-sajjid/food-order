@@ -3,7 +3,7 @@
     --red: #EA2027;
     --red-300: #ff7675;
     --purple: #6F1E51;
-    --black: #1e272e;
+    --black: rgb(30, 39, 46);
     --white: #fff;
     --gray: #dfe4ea;
     --gray-200: #f1f2f6;
@@ -260,4 +260,40 @@
 .bottom-footer a
 {
     color: var(--gray-100);
+}
+
+
+
+/* SEARCH RESULT */
+.search-result-body
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(30, 39, 46, 0.8);
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+}
+.search-input
+{
+    position: relative;
+}
+#close-search
+{
+    color: var(--gray-100);
+    background-color: var(--red);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    right: -15px;
+    cursor: pointer;
+    font-size: 1.3em;
 }

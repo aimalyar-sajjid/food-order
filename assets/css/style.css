@@ -297,3 +297,18 @@
     cursor: pointer;
     font-size: 1.3em;
 }
+form small
+{
+    text-transform: capitalize;
+    color: var(--red);
+}
+
+
+
+/* ADMIN PANEL */
+.login-row
+{
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}

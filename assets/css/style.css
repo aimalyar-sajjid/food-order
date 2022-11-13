@@ -312,3 +312,36 @@ form small
     justify-content: center;
     align-items: center;
 }
+
+.profile
+{
+    display: flex;
+    align-items: center;
+}
+.profile-img
+{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 5px;
+    border: 3px solid var(--red)
+}
+.profile-img img
+{
+    width: 100%;
+    height:  50px;
+    object-fit: cover;
+    object-position: top;
+}
+.profile-details
+{
+    font-size: .8em;
+    text-align: center;
+}
+.profile-details p
+{
+    margin: 0;
+    font-weight: bold;
+
+}

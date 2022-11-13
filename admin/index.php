@@ -1,3 +1,12 @@
+<?php 
+    session_start();
+    include("../config/config.php");
+    
+    if(isset($_SESSION['user_id']))
+    {
+        header("Location: {$URL}/admin/dashboard.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

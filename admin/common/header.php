@@ -1,3 +1,12 @@
+<?php 
+    session_start();
+    include("../config/config.php");
+    
+    if(!isset($_SESSION['user_id']))
+    {
+        header("Location: {$URL}/admin");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,5 +20,32 @@
     <title>FOOD ORDER</title>
 </head>
 <body>
-    <?php include("navbar.php"); ?>
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Admin Panel</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Dashboard</a></li>
+        <li class="nav-item"><a class="nav-link" href="orders.php">Orders</a></li>
+        <li class="nav-item"><a class="nav-link" href="add-dish.php">Add Dish</a></li>
+      </ul>
+        <div class="profile">
+            <div class="profile-img">
+                <img src="../assets/images/pic-4.png" alt="">
+            </div>
+            <div class="profile-details">
+                <p>Aimalyar Sajjid</p>
+                <a href="logout.php">Logout</a>
+            </div>
+        </div>
+    </div>
+  </div>
+</nav>
+<div class="container">
+
+
     

@@ -87,15 +87,60 @@
                             ${status}
                             <td>
                                 <a href="" class="btn btn-sm btn-warning"><i class="fa-solid fa-pen-to-square"></i></a>
-                                <a href="" class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i></a>
+                                <a href="" data-id="${value.id}" class="btn btn-sm btn-danger delete-btn"><i class="fa-solid fa-trash"></i></a>
                             </td>
                         </tr>
                     `;
                 });
 
                 $("#dish-data-table").html(html);
+
+                $.each($(".delete-btn"), function(){
+                    $(this).on("click", function(e){
+                        e.preventDefault();
+                        
+                        let id = $(this).data("id");
+
+                        $.ajax({
+                            url: "../actions/delete.php",
+                            type: "POST",
+                            data: {action: "delete-dish", id:id},
+                            success: function(data)
+                            {
+                                let result = JSON.parse(data);
+                                if(result.status == 1)
+                                {
+                                    // SHOW MSG
+                                    $("#success-msg").attr("class", "alert alert-success mt-3").text(result.success);
+
+                                    // HIDE MSG
+                                    setTimeout(function(){
+                                        $("#success-msg").removeAttr("class").text("");
+                                    }, 5000);
+
+                                    // LOAD TABLE
+                                    loadData();
+                                }else
+                                {
+                                    // SHOW MSG
+                                    $("#success-msg").attr("class", "alert alert-success mt-3").text(result.error);
+
+                                    // HIDE MSG
+                                    setTimeout(function(){
+                                        $("#success-msg").removeAttr("class").text("");
+                                    }, 5000);
+                                }
+                            }
+                        });
+                    });
+                });
             }
         });
+
+
+
+        
+
     }
      loadData();
 
@@ -150,6 +195,9 @@
         });
      }
      addData();
+
+
+
 
 </script>
 <?php include_once("common/footer.php"); ?>

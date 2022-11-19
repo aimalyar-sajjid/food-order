@@ -3,7 +3,8 @@
     <div class="col">
         <div class="card p-3">
             <form id="add-menu-form" class="row">
-                <input type="hidden" name="action" value="add-menu">
+                <input type="hidden" name="action" id="action" value="add-menu">
+                <input type="hidden" name="dish-id" id="dish-id">
 
                 <div class="form-group col-md-3">
                     <input type="text" name="title" id="title" class="form-control validate" placeholder="Title">
@@ -21,7 +22,9 @@
                 </div>
 
                 <div class="form-group col-md-3">
+                    <input type="hidden" name="old-picture" id="old-picture">
                     <input type="file" name="picture" id="picture" class="form-control validate">
+                    <img width="50px">
                     <small></small>
                 </div>
 
@@ -86,7 +89,13 @@
                             <td>${value.price}</td>
                             ${status}
                             <td>
-                                <a href="" class="btn btn-sm btn-warning"><i class="fa-solid fa-pen-to-square"></i></a>
+                                <a href="" 
+                                data-id="${value.id}" 
+                                data-title="${value.title}"
+                                data-des="${value.decription}"
+                                data-price="${value.price}"
+                                data-picture="${value.picture}"
+                                class="btn edit-btn btn-sm btn-warning"><i class="fa-solid fa-pen-to-square"></i></a>
                                 <a href="" data-id="${value.id}" class="btn btn-sm btn-danger delete-btn"><i class="fa-solid fa-trash"></i></a>
                             </td>
                         </tr>
@@ -95,6 +104,7 @@
 
                 $("#dish-data-table").html(html);
 
+                // DELETE DISH
                 $.each($(".delete-btn"), function(){
                     $(this).on("click", function(e){
                         e.preventDefault();
@@ -132,6 +142,24 @@
                                 }
                             }
                         });
+                    });
+                });
+
+
+                // EDIT DISH
+                $.each($(".edit-btn"), function(){
+                    $(this).on("click", function(e){
+                        e.preventDefault();
+
+                        $("#action").val("update-dish");
+                        $("#dish-id").val($(this).data("id"));
+                        $("#title").val($(this).data("title"));
+                        $("#description").val($(this).data("des"));
+                        $("#price").val($(this).data("price"));
+                        $("#old-picture").val($(this).data("picture"));
+                        $("form .form-group img").attr("src", "../assets/images/" + $(this).data("picture"));
+                        $(".form-btn").text("Update Dish").attr("class", "btn btn-success");
+                        
                     });
                 });
             }

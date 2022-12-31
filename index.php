@@ -45,7 +45,7 @@
                 </div>
                 <div class="card-body">
                     <a href="#" class="card-link">$ <?php echo $record['price'] ?></a>
-                    <a href="#" class="card-link">Add To Cart</a>
+                    <a href="#" class="card-link">Enjoy The Dish!</a>
                 </div>
                 </div>
             </div>

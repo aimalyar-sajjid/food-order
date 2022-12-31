@@ -38,7 +38,7 @@ CREATE TABLE order_now
     date VARCHAR(50),
     address VARCHAR(300),
     message VARCHAR(300),
-    status INT DEFAULT 1
+    status ENUM("Pending", "Delivered", "Canceled") DEFAULT "Pending"
 );
 
 

@@ -17,4 +17,13 @@
     
         echo json_encode(["menu" => $result]);
     }
+
+
+    // RETRIVE PROFILE INFO FOR UPDATION
+    if(isset($_POST['action']) && $_POST['action'] == "profile")
+    {
+        $result = $db->select("SELECT * FROM admin WHERE id = {$_POST['adminId']}");
+    
+        echo json_encode(["profile" => $result]);
+    }
 ?>

@@ -4,7 +4,7 @@
     
     if(isset($_SESSION['user_id']))
     {
-        header("Location: {$URL}/admin/dashboard.php");
+        header("Location: {$URL}/admin/orders.php");
     }
 ?>
 <!DOCTYPE html>
@@ -75,7 +75,7 @@
                             if(result.status == 1)
                             {
                                 $("#login-form button").text("Login").removeAttr("disabled");
-                                window.location.assign("dashboard.php");
+                                window.location.assign("orders.php");
                             }else
                             {
                                 $("#login-form button").text("Login").removeAttr("disabled");

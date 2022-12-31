@@ -10,6 +10,6 @@
     
     <title>FOOD ORDER</title>
 </head>
-<body>
+<body style="overflow-x: hidden">
     <?php include("navbar.php"); ?>
     

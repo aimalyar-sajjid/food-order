@@ -29,16 +29,16 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       
     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Dashboard</a></li>
-        <li class="nav-item"><a class="nav-link" href="orders.php">Orders</a></li>
-        <li class="nav-item"><a class="nav-link" href="add-dish.php">Add Dish</a></li>
+      <li class="nav-item"><a class="nav-link" href="orders.php">Orders</a></li>
+      <li class="nav-item"><a class="nav-link" href="add-dish.php">Add Dish</a></li>
+      <li class="nav-item"><a class="nav-link active" aria-current="page" href="profile.php">Profile</a></li>
       </ul>
         <div class="profile">
             <div class="profile-img">
-                <img src="../assets/images/pic-4.png" alt="">
+                <img src="../assets/images/<?php echo $_SESSION['picture'] ?>" alt="">
             </div>
             <div class="profile-details">
-                <p>Aimalyar Sajjid</p>
+                <p><?php echo $_SESSION['user_name'] ?></p>
                 <a href="logout.php">Logout</a>
             </div>
         </div>

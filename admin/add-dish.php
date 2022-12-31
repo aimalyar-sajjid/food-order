@@ -159,6 +159,7 @@
                         $("#old-picture").val($(this).data("picture"));
                         $("form .form-group img").attr("src", "../assets/images/" + $(this).data("picture"));
                         $(".form-btn").text("Update Dish").attr("class", "btn btn-success");
+                        $("#picture").attr("class", "form-control");
                         
                     });
                 });
@@ -181,7 +182,9 @@
             if(validate(".validate"))
             {
                 let formData = new FormData(this);
-                $.ajax({
+                if($("#action").val() == "add-menu")
+                {
+                    $.ajax({
                     url: "../actions/insert.php",
                     type: "POST",
                     data: formData,
@@ -219,6 +222,47 @@
                         }
                     }
                 });
+                }else
+                {
+                    $.ajax({
+                    url: "../actions/update.php",
+                    type: "POST",
+                    data: formData,
+                    contentType: false,
+                    processData: false,
+                    beforeSend: function(){
+                        $(".form-btn").text("Updating...").attr("disabled", "true");
+                    },
+                    success: function(data)
+                    {
+                        let result = JSON.parse(data);
+                        if(result.status == 1)
+                        {
+                            $("#success-msg").attr("class", "alert alert-success mt-3").text(result.success);
+                            $(".form-btn").text("Add Dish").removeAttr("disabled");
+
+                            // HIDE MESSAGE
+                            setTimeout(function(){
+                                $("#success-msg").removeAttr("class").text("");
+                            }, 5000);
+
+                            $("form").trigger("reset");
+
+                            // UPDATE TABLE 
+                            loadData();
+                        }else
+                        {
+                            $("#success-msg").attr("class", "alert alert-danger mt-3").text(result.error);
+                            $(".form-btn").text("Add Dish").removeAttr("disabled");
+
+                            // HIDE MESSAGE
+                            setTimeout(function(){
+                                $("#success-msg").removeAttr("class").text("");
+                            }, 5000);
+                        }
+                    }
+                });
+                }
             }
         });
      }
